@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        
+        <div id="button" style="text-align: center;">
+            <input type="button" value="Call Native" style="width: 100px; height: 100px;" onclick="callNative()" />
+        </div>
+        
+        <script src="iosBridge.js"></script>
+        <script type="text/javascript">
+            
+            document.getElementById("button").style.marginTop = "50px";
+            
+            function callNative() {
+                calliOSFunction("callNative", [], function(ret){});
+            }
+        
+            function fromNative(parameter) {
+                alert("It's come from Native");
+            }
+        
+        
+        </script>
+    </body>
+</html>
